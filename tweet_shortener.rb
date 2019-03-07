@@ -16,8 +16,9 @@ end
 
 def word_substituter(tweet)
   # replaces long words with their expected short form
+
     tweet.split(" ").map do |word|
-      if dictionary.values.include?(word.downcase)
+      if dictionary.keys.include?(word.downcase)
         word = dictionary[word.downcase]
       else
         word
